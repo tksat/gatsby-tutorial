@@ -3,6 +3,8 @@ import { css } from "@emotion/react"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 
+//pages直下以外でgraphql使う場合はuseStaticQueryを使用
+
 export default function Layout({ children }) {
   const data = useStaticQuery(
     graphql`

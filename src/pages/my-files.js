@@ -1,8 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-export default function MyFiles({ data }) {
-  console.log(data)
+
+// export default function MyFiles({ data }) {
+export default function MyFiles(props) {
+  console.log(props)
   return (
     <Layout>
       <div>
@@ -17,7 +19,7 @@ export default function MyFiles({ data }) {
             </tr>
           </thead>
           <tbody>
-            {data.allFile.edges.map(({ node }, index) => (
+            {props.data.allFile.edges.map(({ node }, index) => (
               <tr key={index}>
                 <td>{node.relativePath}</td>
                 <td>{node.prettySize}</td>
